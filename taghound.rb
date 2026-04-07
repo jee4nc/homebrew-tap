@@ -5,23 +5,23 @@
 class Taghound < Formula
   desc "A fast CLI tool that tracks Git releases by reading branches and tags"
   homepage "https://github.com/jee4nc/taghound"
-  version "0.1.4"
+  version "0.1.5"
   license "MIT"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jee4nc/taghound/releases/download/v0.1.4/taghound_darwin_amd64.tar.gz"
-      sha256 "f54122caa00eb5805b6e05a558c4f8e8515a60e01e3b5d7f41dfb0e61af942e6"
+      url "https://github.com/jee4nc/taghound/releases/download/v0.1.5/taghound_darwin_amd64.tar.gz"
+      sha256 "bb8bd2b83724e0b5247044e2ca6e84e8c0659f302a49e5266f82e136ca407d85"
 
       define_method(:install) do
         bin.install "taghound"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jee4nc/taghound/releases/download/v0.1.4/taghound_darwin_arm64.tar.gz"
-      sha256 "dd1b126be7c8a19a032ef2b31f32741f52cb3c8f82e47b46acaceaa703170728"
+      url "https://github.com/jee4nc/taghound/releases/download/v0.1.5/taghound_darwin_arm64.tar.gz"
+      sha256 "8838b4fa60987f32d2940a54c54e16f7f873e7878a370257ccb303804392fbdf"
 
       define_method(:install) do
         bin.install "taghound"
@@ -31,15 +31,15 @@ class Taghound < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jee4nc/taghound/releases/download/v0.1.4/taghound_linux_amd64.tar.gz"
-      sha256 "406909f1e28939c3ae227de2c629958d5ff839a8a9e9bed32182d8ed59950357"
+      url "https://github.com/jee4nc/taghound/releases/download/v0.1.5/taghound_linux_amd64.tar.gz"
+      sha256 "9e294e17ef3e5a11a1f0cd479b46df709b44861aeffcc4a71f52e69532b05480"
       define_method(:install) do
         bin.install "taghound"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jee4nc/taghound/releases/download/v0.1.4/taghound_linux_arm64.tar.gz"
-      sha256 "c0b69f1372127ddb2579fdc2bd8becffbdae39fb15f979afada6664e6b0c4660"
+      url "https://github.com/jee4nc/taghound/releases/download/v0.1.5/taghound_linux_arm64.tar.gz"
+      sha256 "d5da87ce25b0a40cddaa8379d75f046fa032c9849b5e5ea393aaf8fb2cb404aa"
       define_method(:install) do
         bin.install "taghound"
       end
