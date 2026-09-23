@@ -5,23 +5,23 @@
 class Packwatch < Formula
   desc "Interactive CLI to check and update outdated npm packages with Node version awareness"
   homepage "https://github.com/jee4nc/packwatch"
-  version "0.1.7"
+  version "0.1.8"
   license "MIT"
 
   depends_on "node"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jee4nc/packwatch/releases/download/v0.1.7/packwatch_darwin_amd64.tar.gz"
-      sha256 "588a85acfb97f7e70efa174c778acef7f72259f7b8dc008c2e958fdb45192443"
+      url "https://github.com/jee4nc/packwatch/releases/download/v0.1.8/packwatch_darwin_amd64.tar.gz"
+      sha256 "a17ce6771b2efa56dc17320f04a7304eeb0ed48bc34190a1b80a39355307ea0d"
 
       define_method(:install) do
         bin.install "packwatch"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jee4nc/packwatch/releases/download/v0.1.7/packwatch_darwin_arm64.tar.gz"
-      sha256 "598951d188c8bdd917b1e85b741dbd066cbe82b671e6231db265c51cf15f81e8"
+      url "https://github.com/jee4nc/packwatch/releases/download/v0.1.8/packwatch_darwin_arm64.tar.gz"
+      sha256 "741f024b51fed7dfe716cc242c9ab3a54c77b523d508ab7d3cae07d0711d9be4"
 
       define_method(:install) do
         bin.install "packwatch"
@@ -31,15 +31,15 @@ class Packwatch < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jee4nc/packwatch/releases/download/v0.1.7/packwatch_linux_amd64.tar.gz"
-      sha256 "b374e21743274815be203939dbfe99e6b9bd0e36c5394d5e2628e9d7e3b903c4"
+      url "https://github.com/jee4nc/packwatch/releases/download/v0.1.8/packwatch_linux_amd64.tar.gz"
+      sha256 "ce7ef12aedde95236eb3c9ce491d536b3f257c0ada79e29c878aa10170b77386"
       define_method(:install) do
         bin.install "packwatch"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jee4nc/packwatch/releases/download/v0.1.7/packwatch_linux_arm64.tar.gz"
-      sha256 "1896ff6014958cbd4ba700c9978528b2933f0531f5fed85da5e2c2984878b146"
+      url "https://github.com/jee4nc/packwatch/releases/download/v0.1.8/packwatch_linux_arm64.tar.gz"
+      sha256 "faf3b4673e2b6697b8b2de22ded0d7dc5a44988b5d3845724810723383adab3c"
       define_method(:install) do
         bin.install "packwatch"
       end
